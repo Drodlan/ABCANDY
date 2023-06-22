@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ABCANDY</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- vidstuff -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span id="closevid" class="closevid">&times;</span>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/H6SZuAcqeW8"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- formstuff -->
+    <div id="formPopup" class="popup">
+        <div class="popup-content">
+            <div class="formheader">
+                <h2>Contact us</h2>
+                <span id="closeFormBtn" class="closeform">&times;</span>
+            </div>
+            <div class="form-content">
+                <form>
+                    <div class="name-email">
+                        <div class="name">
+                            <label for="namebox">Your Name</label>
+                            <input type="text" class="box" id="namebox" name="namebox" value="Enter your name" required>
+                        </div>
+                        <div class="email">
+                            <label for="emailbox">Email</label>
+                            <input type="email" class="box" id="emailbox" name="emailbox" value="Enter email" required>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="select-subject">
+                        <label for="select-subject-box">Select subject</label>
+                        <select class="box" id="select-subject-box">
+                            <option value="none" selected disabled hidden>Select subject</option>
+                            <option value="Chrome">Chrome</option>
+                            <option value="Firefox">Firefox</option>
+                            <option value="Safari">Safari</option>
+                        </select>
+                    </div>
+                    <div class="message">
+                        <label for="messagebox">Your message</label>
+                        <textarea class="messagebox" id="messagebox" name="messagebox"
+                            placeholder="Your message"></textarea>
+                    </div>
+                    <input type="submit" class="submit" value="Send Message">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <!-- <h1>Header</h1> -->
+        <nav class="navbar">
+            <div class="head-part1">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">What's New?</a>
+            </div>
+            <div class="title">
+                <img class="abcandy" src="images/abcandy.png">
+            </div>
+            <div class=" head-part2">
+                <a href="#">Community</a>
+                <a href="#">Blog</a>
+                <!-- <a href="#">Contact Us</a> -->
+                <button id="openFormBtn" class="contactHead">Contact Us</button>
+            </div>
+        </nav>
+
+    </header>
+
+    <section class="banner" id="banner">
+        <div class="fadeprev">
+            <img class="prevCarImg" id="prevCarImg" src="">
+            <button class="Back" id="Back" onclick="plusSlides(-1)">&#8592;</button>
+        </div>
+
+        <div class="center-carousel">
+            <div class="carousel">
+
+                <div class="Containers">
+
+                    <div class="image-container">
+                        <img class="carImg" id="carImg" src="" style="width:100%">
+                    </div>
+
+                    <div class="text">
+                        <span style="display: inline-flex;">
+                            <div class="subject" id="subject">
+                                <!-- Design -->
+                            </div>
+                            <div class="date" id="date">
+                                <!-- 10 June 2023 -->
+                            </div>
+                        </span>
+                        <div class="Info" id="Info">
+                            <!-- <h1>
+                                Lorem ipsum dolor sit amet consectetur
+                            </h1> -->
+                        </div>
+                        <div class="MessageInfo" id="MessageInfo">
+                            <!-- <h4>
+                                Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam consectetur elementum
+                                aenean
+                                fringilla amet blandit duis. Neque habitant odio donec adipiscing etiam lobortis
+                                volutpat
+                                est...
+                            </h4> -->
+                        </div>
+                        <div class="read"><a id="read" href="">Read More</a></div>
+                    </div>
+                </div>
+
+
+                <!-- Back and forward buttons -->
+                <!-- <a class="Back" onclick="plusSlides(-1)">&#10094;</a> -->
+                <!-- <a class="forward" onclick="plusSlides(1)">&#10095;</a> -->
+            </div>
+
+            <!-- The circles/dots -->
+            <div class="dotty" style="text-align:center">
+                <span class="dots" onclick="currentSlide(0)"></span>
+                <span class="dots" onclick="currentSlide(1)"></span>
+                <span class="dots" onclick="currentSlide(2)"></span>
+                <span class="dots" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <div class="fadenext">
+            <img class="nextCarImg" id="nextCarImg" src="">
+            <button class="forward" id="forward" onclick="plusSlides(1)">&#8594;</button>
+        </div>
+
+
+
+        \
+    </section>
+
+    <section class="blog" id="blog">
+        <div class="blog-header">
+            <div class="blog-title">
+                <h1>Blog</h1>
+            </div>
+            <div class="blog-head-part1">
+                <a href="#">Sports</a>
+                <a href="#">Sports Car</a>
+                <a href="#">Bike</a>
+            </div>
+            <div class="blog-head-search">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+        <div class="list1">
+            <!-- <ul class="list1"> -->
+            <!-- <li> -->
+            <div class="listContainers1">
+                <img id="threeImg" src="" onclick="plusSlides2(1)" style="width:100%">
+                <div class="text">
+                    <div class="dotty2" id style="text-align:center">
+                        <span class="dots2" onclick="currentSlide2(0)"></span>
+                        <span class="dots2" onclick="currentSlide2(1)"></span>
+                        <span class="dots2" onclick="currentSlide2(2)"></span>
+                    </div>
+                    <span style="display: inline-flex;">
+                        <div class="subject">Design</div>
+                        <div class="date">10 June 2023</div>
+                    </span>
+                    <div class="Info">
+                        <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                    </div>
+                    <div class="MessageInfo">
+                        <h4>Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam consectetur elementum
+                            aenean fringilla amet blandit duis. Neque habitant odio donec adipiscing etiam
+                            lobortis volutpat est...<br /><br /><b>by John Doe</b></h4>
+                    </div>
+                </div>
+            </div>
+            <!-- </li> -->
+            <!-- <li> -->
+            <div class="listContainers1">
+                <img src="images/watch.jpg" class="watch" style="width:100%">
+                <!-- <a href="" class="videoplay">Watch Now <img src="images/play.png" class="play"></a> -->
+                <button id="openModalBtn" class="videoplay">Watch Now <img src="images/play.png" class="play"></button>
+                <div class="text">
+                    <span style="display: inline-flex;">
+                        <div class="subject">Design</div>
+                        <div class="date">10 June 2023</div>
+                    </span>
+                    <div class="Info">
+                        <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                    </div>
+                    <div class="MessageInfo">
+                        <h4>Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam consectetur elementum
+                            aenean fringilla amet blandit duis. Neque habitant odio donec adipiscing etiam
+                            lobortis volutpat est...</h4>
+                    </div>
+
+                    <button id="openModalBtn2" class="vid">Watch Now</button>
+
+
+
+                </div>
+            </div>
+            <!-- </li> -->
+            <!-- </ul> -->
+        </div>
+
+        <div class="list2">
+            <img class="wide1" src="images/wide1.jpg" style="width:100%">
+            <div class="listContainers2">
+                <div class="text">
+                    <div class="Info">
+                        <h1>Creative team, intuitve solution</h1>
+                    </div>
+                    <div class="MessageInfo">
+                        <h4>Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam consectetur elementum
+                            aenean fringilla amet blandit duis. Neque habitant odio donec adipiscing etiam
+                            lobortis volutpat est...</h4>
+                    </div>
+                    <button id="openFormBtn2" class="lets-talk1">Let's Talk</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="list3">
+            <div class="listContainers3">
+                <img class="container3-image" src="images/wide2.jpg">
+                <div class="text">
+                    <span style="display: inline-flex;">
+                        <div class="subject">Design</div>
+                        <div class="date">10 June 2023</div>
+                    </span>
+                    <div class="Info">
+                        <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                    </div>
+                    <div class="MessageInfo">
+                        <h4>Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam consectetur elementum
+                            aenean fringilla amet blandit duis. Neque habitant odio donec adipiscing etiam
+                            lobortis volutpat est...</h4>
+                    </div>
+                    <div class="read"> Read More</div>
+                </div>
+            </div>
+            <div class="list-cont4">
+                <img src="images/tall1.jpg" style="height:100%">
+                <div class="listContainers4">
+                    <div class="text">
+                        <div class="Info">
+                            DO YOU NEED ANY CREATIVE SERVICES FOR YOUR BUSINESS?
+                        </div>
+                        <button id="openFormBtn3" class="lets-talk2">Let's Talk</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="loadmoreblog" id="loadmoreblog">
+            <div class="list4">
+                <div class="listContainers5">
+                    <img src="images/extra1.jpg" style="width:100%">
+                    <div class="text">
+                        <span style="display: inline-flex;">
+                            <div class="subject">Design</div>
+                            <div class="date">10 June 2023</div>
+                        </span>
+                        <div class="Info">
+                            <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                        </div>
+                        <div class="MessageInfo">
+                            <h4>Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam consectetur elementum
+                                aenean fringilla amet blandit duis. Neque habitant odio donec adipiscing etiam
+                                lobortis volutpat est...<br /><br /><b>by John Doe</b></h4>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="listContainers5">
+                    <img src="images/extra2.jpg" style="width:100%">
+                    <div class="text">
+                        <span style="display: inline-flex;">
+                            <div class="subject">Design</div>
+                            <div class="date">10 June 2023</div>
+                        </span>
+                        <div class="Info">
+                            <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                        </div>
+                        <div class="MessageInfo">
+                            <h4>Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam consectetur elementum
+                                aenean fringilla amet blandit duis. Neque habitant odio donec adipiscing etiam
+                                lobortis volutpat est...<br /><br /><b>by John Doe</b></h4>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="listContainers5">
+                    <img src="images/extra3.jpg" style="width:100%">
+                    <div class="text">
+                        <span style="display: inline-flex;">
+                            <div class="subject">Design</div>
+                            <div class="date">10 June 2023</div>
+                        </span>
+                        <div class="Info">
+                            <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                        </div>
+                        <div class="MessageInfo">
+                            <h4>Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam consectetur elementum
+                                aenean fringilla amet blandit duis. Neque habitant odio donec adipiscing etiam
+                                lobortis volutpat est...<br /><br /><b>by John Doe</b></h4>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list5">
+                <div class="listContainers5">
+                    <img src="images/extra4.jpg" style="width:100%">
+                    <div class="text">
+                        <span style="display: inline-flex;">
+                            <div class="subject">Design</div>
+                            <div class="date">10 June 2023</div>
+                        </span>
+                        <div class="Info">
+                            <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                        </div>
+                        <div class="MessageInfo">
+                            <h4>Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam consectetur elementum
+                                aenean fringilla amet blandit duis. Neque habitant odio donec adipiscing etiam
+                                lobortis volutpat est...<br /><br /><b>by John Doe</b></h4>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="listContainers5">
+                    <img src="images/extra5.jpg" style="width:100%">
+                    <div class="text">
+                        <span style="display: inline-flex;">
+                            <div class="subject">Design</div>
+                            <div class="date">10 June 2023</div>
+                        </span>
+                        <div class="Info">
+                            <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                        </div>
+                        <div class="MessageInfo">
+                            <h4>Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam consectetur elementum
+                                aenean fringilla amet blandit duis. Neque habitant odio donec adipiscing etiam
+                                lobortis volutpat est...<br /><br /><b>by John Doe</b></h4>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="listContainers5">
+                    <img src="images/extra6.jpg" style="width:100%">
+                    <div class="text">
+                        <span style="display: inline-flex;">
+                            <div class="subject">Design</div>
+                            <div class="date">10 June 2023</div>
+                        </span>
+                        <div class="Info">
+                            <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                        </div>
+                        <div class="MessageInfo">
+                            <h4>Lorem ipsum dolor sit amet consectetur. Egestas aliquet quam consectetur elementum
+                                aenean fringilla amet blandit duis. Neque habitant odio donec adipiscing etiam
+                                lobortis volutpat est...<br /><br /><b>by John Doe</b></h4>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="loadMoreBtn">Load More</button>
+    </section>
+
+    <footer class="footer">
+        <h3>Connect with us</h3>
+        <div class="connections">
+            <a href="#"><img src="images/icon_instagram.png"></a>
+            <a href="#"><img src="images/icon_twitter.png"></a>
+            <a href="#"><img src="images/icon_youtube.png"></a>
+            <a href="#"><img src="images/icon_facebook.png"></a>
+        </div>
+        <div class="abcandyltd">
+            <h5>© 2023 ABCandy Bangladesh Ltd.</h5>
+        </div>
+        <div class="tc-pp">
+            <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
